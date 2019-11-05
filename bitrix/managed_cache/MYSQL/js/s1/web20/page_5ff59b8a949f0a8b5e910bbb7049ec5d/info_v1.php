@@ -1,0 +1,1 @@
+<?php $filesInfo = array("/bitrix/components/bitrix/photogallery.detail.list/templates/.default/script.js" => "15729499162618","/bitrix/components/bitrix/photogallery.detail.list/templates/slider_big/script_cursor.js" => "15729499163851",); ?>
