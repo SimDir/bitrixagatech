@@ -1,0 +1,98 @@
+ 
+.fader {position: relative; height:800px; margin-top:90px; background:#f8f8f8; }
+.fader .slide {position: absolute;width: 100%;height: 100%;top: 0;z-index: 1;opacity: 0;}
+.fader .slide .mainbox{ position:relative; overflow:hidden; height:100%;}
+.fader .slide a{ width:100%; height:100%; display:block; color:#fff;}
+.fader .prev,
+.fader .next { background:url(../images/pre.png) no-repeat; background-size:contain;
+    position: absolute;
+    height:40px;
+    line-height: 55px;
+    width:40px;
+    font-size: 0px;
+    text-align: center;
+    color: #fff;
+    top: 50%;
+    left: 0;
+    z-index: 4;
+    margin-top: -20px;
+    cursor: pointer;
+ 
+    transition: all 150ms;  
+}
+
+.fader .prev:hover,
+.fader .next:hover {
+    opacity: 1;
+}
+
+.fader .next { background:url(../images/next.png) no-repeat; background-size:contain;
+    left: auto;
+    right: 0;
+}
+.fader .pager_list {
+    position: absolute;
+    width: 100%;
+    height:30px;
+    padding: 0;
+    line-height:20px;
+    bottom: 0;
+    text-align: center;
+    z-index: 4;
+}
+
+.fader .pager_list li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background:none; border:1px solid #fff; box-sizing:border-box;
+    opacity:1;
+    text-indent: -9999px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 150ms; padding:0;
+}
+ 
+.fader .pager_list li.active { background:#fff;}
+.fader .slide a:before{ content:""; width:100%; height:100%; display:block; background: -webkit-linear-gradient(top, rgba(0,0,0,0) 70%, rgba(0,0,0,0.7)); position:absolute; left:0; top:0;}
+.fader .slide .txt{ position:absolute; left:50%; width:1200px; top:auto; margin-left:-600px;  bottom:50px; text-align:left; }
+@media screen and (max-width:2580px){
+.fader { height:750px;}	
+}
+
+@media screen and (max-width:1920px){
+.fader { height:700px;}	
+}
+@media screen and (max-width:1600px){
+.fader { height:650px;}	
+}
+ 
+@media screen and (max-width:1440px) {
+.fader { height:600px;}	
+}
+@media screen and (max-width:1230px) {
+.fader { height:500px;}	
+.fader .slide .txt{ width:90%; margin-left:-45%;}
+}
+@media screen and (max-width:1030px) {
+.fader { height:450px;}	 
+}
+ 
+
+@media screen and (max-width:768px) {
+.fader{ height:400px; margin-top:50px;}
+}
+@media screen and (max-width:660px) {
+.fader { height:350px;}	 
+}
+ 
+@media screen and (max-width:470px) {
+.fader{ height:300px;} 
+}
+@media screen and (max-width:400px) {
+.fader{ height:260px;}
+}
+@media screen and (max-width:320px) {
+ 
+}

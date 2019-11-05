@@ -1,0 +1,58 @@
+
+.wechatbox1{ width:360px; height:200px; background:#fff; box-sizing:border-box;   position:fixed; left:50%;top:50%; margin:-200px 0 0 -180px; z-index:1002;  transform:scale(0); opacity:0; transition:all 0.5s cubic-bezier(0.105,1.095,0.000,1.110); } 
+.wechatbox1.niu{ transform:scale(1); opacity:1;}
+.wechatbox1 .close{ background:url(../images/close.png) no-repeat; width:18px; height:18px; display:block; position:absolute; right:20px; top:20px;}
+.wechatbox1 dl{ width:250px; text-align:center; margin:0 auto; font-size:14px; color:#666;   margin-top: 60px;line-height: 28px;font-size: 16px;}
+.wechatbox1 dl dt{ margin:80px auto 25px auto;}
+ @media screen and (max-width:400px){
+ 
+.wechatbox1{ width:80%; height:200px;  margin:-150px 0 0 -40%; z-index:1002; } 
+.wechatbox1 dl dt{ margin:40px auto 10px auto;}
+ 
+}
+.contact_pop1{width:720px; box-sizing:border-box; margin: 0px auto;} 
+.contact_pop1.niu{ transform:scale(1); opacity:1;}
+.contact_pop1 .close{ background:url(../images/close.png) no-repeat; width:18px; height:18px; display:block; position:absolute; right:20px; top:20px;}
+.contact_pop1 h2{ font-size:28px; text-align:center; color:#ae173b; line-height:30px; margin-top:35px;}
+.contact_pop1 ul{ width:590px; margin:30px auto;  }
+.contact_pop1 li{ width:255px; float:left; margin:10px 20px;}
+.contact_pop1 li span{ display:block; width:45px; font-size:14px; line-height:32px; float:left;}
+.contact_pop1 li .txt{ box-sizing:border-box; border-radius: 0; border:1px solid #e5e5e5; font-size:14px; line-height:22px; padding:5px 10px; float:right;}
+.contact_pop1 li .txt.w1{ width:210px; height:32px;}
+.contact_pop1 li select{ width:210px; border-radius: 0; height:32px;box-sizing:border-box; border:1px solid #e5e5e5; font-size:14px; line-height:22px; padding:5px 10px; float:right;}
+.contact_pop1 li.long{ width:550px;}
+.contact_pop1 li.long .txt.w2{ width:505px;}
+.contact_pop1 li.long .txt.w3{ height:120px; width:100%; }
+.contact_pop1 li .btn{ display:block; border-radius: 0; width:110px; height:36px; margin:0 auto; color:#fff; font-size:16px; text-align:center; background:#ae173b; transition:all 0.3s; border:0; cursor:pointer;}
+.contact_pop1 li .btn:hover{ background:#a0092d;}
+
+@media screen and (max-width:768px) {
+.place{ margin-top:10px;}
+ 
+.contact_pop1{ width:90%; } 
+.contact_pop1 h2{ font-size:20px; line-height:24px; margin-top:25px;}
+.contact_pop1 ul{ width:90%; margin:30px auto;  }
+.contact_pop1 li{ width:48%; margin:10px 1%;}
+.contact_pop1 li span{ width:45px; }
+ 
+.contact_pop1 li .txt.w1{ width:80%; height:32px;}
+.contact_pop1 li select{ width:80%;}
+.contact_pop1 li.long{ width:98%;}
+.contact_pop1 li.long .txt.w2{ width:90%;}
+.contact_pop1 li.long .txt.w3{ width:100%; }
+
+}
+
+@media screen and (max-width:600px) {
+.contact_pop1{ top:5%;}  
+.contact_pop1 ul{ width:90%;   }
+.contact_pop1 li{ width:100%; margin:10px 0%; float:none; clear:both; overflow:hidden;}
+.contact_pop1 li span{ width:45px; display:none; }
+ 
+.contact_pop1 li .txt.w1{ width:100%; height:32px; float:none;}
+.contact_pop1 li select{ width:100%; float:none;}
+.contact_pop1 li.long{ width:100%;}
+.contact_pop1 li.long .txt.w2{ width:100%;}
+.contact_pop1 li.long .txt.w3{ width:100%; }
+.contact_pop1 li .btn{ width:100%;}
+}

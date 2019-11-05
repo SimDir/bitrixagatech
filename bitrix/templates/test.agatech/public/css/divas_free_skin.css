@@ -1,0 +1,211 @@
+#slider_wrapper {
+	overflow: hidden; margin-top:40px;
+}
+
+.divas-slider {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.divas-slider-container {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.divas-slider-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.divas-slide {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	float: left;
+	overflow: hidden;
+}
+
+.divas-slide img {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	outline: 0 none;
+	-webkit-backface-visibility: hidden;
+  	-moz-backface-visibility: hidden;
+ 	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/************************************************************************
+ * 4. DEFAULT slider settings
+ *************************************************************************/
+
+/*
+ * divas slide transitions
+ */
+.divas-slide-transition-left {    
+	 -webkit-transition: left 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+	 -moz-transition: left 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+	 -o-transition: left 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+	 transition: left 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+}
+
+/*
+ * divas navigation buttons
+ */
+.divas-navigation {
+	clear: both;
+	position: absolute;
+	margin: 0px auto;
+	height: 0;
+	width: 100%;
+	text-align: center;
+	top: 47%; margin-top:-16px;
+/*	top: calc(50% - 33px);*/
+}
+.divas-has-bullets .divas-navigation {
+    top: calc(50% - 61px);
+}
+
+.divas-navigation span {
+	height:33px;
+	outline: 0 none; 
+	position: absolute;
+	width:16px; 
+	z-index: 9999;
+	cursor: pointer;
+	margin: 0;
+ 
+	color: #fff;
+}
+
+
+.divas-navigation span:hover {
+	color: #ffffff;
+}
+
+.divas-controls span.divas-start,
+.divas-controls span.divas-stop {
+	display: none;
+}
+
+.divas-navigation span.divas-prev {left:15%;/*background: url("../images/prex.png") no-repeat top center rgba(0, 0, 0, 0);*/}
+
+.divas-navigation span.divas-next {right:15%;/*background: url("../images/nextx.png") no-repeat top center rgba(0, 0, 0, 0);*/}
+.divas-navigation span.divas-prev:after{  font-family: 'fontello'; content:"\e806"; color:#a6a8ae; font-size:40px; transition:all 0.3s ease-in;}
+.divas-navigation span.divas-next:after{  font-family: 'fontello'; content:"\e805"; color:#a6a8ae; font-size:40px; transition:all 0.3s ease-in;}
+.divas-navigation span.divas-prev:hover:after{ color:#fff;}
+.divas-navigation span.divas-next:hover:after{color:#fff;}
+
+@media screen and (max-width: 470px) {
+	.divas-navigation span.divas-prev,
+	.divas-navigation span.divas-next{
+		background-position:center center;
+		-webkit-background-size:60% auto;
+		-moz-background-size:60% auto;
+		-o-background-size:60% auto;
+		background-size:60% auto;
+	}
+	.divas-navigation span.divas-prev {
+		left:10px; top:50%;
+	}
+	.divas-navigation span.divas-next {
+		right:10px;
+	}
+}	
+
+/*
+ * divas caption styling
+ */
+.divas-caption {
+	position: absolute;
+	bottom:20px;
+	width: auto;
+	/*background: rgba(0,0,0,0.7);*/
+	color: #fff;
+	border: none;
+	padding: 1em 2em 1.6em;
+	margin: 0 2em;
+}
+
+
+/*
+ * divas caption transitions: left
+ */
+.divas-caption.divas-title-transition-left-start {
+	left: -999px;
+}
+
+.divas-caption.divas-title-transition-left {
+	-webkit-transition: left 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+	-moz-transition: left 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+	-o-transition: left 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+	transition: left 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+}
+
+.divas-caption.divas-title-transition-left-stop {
+	left: 0px;
+}
+
+.divas-caption h1 {
+ 
+	font-size:20px;
+	 
+}
+
+.divas-caption p {
+	font-style: italic;
+	font-size: 1.6em;
+}
+
+/*
+ * divas navigation bullets
+ */
+.divas-bullets {
+	clear: both;
+	position: relative;
+	margin: 0 auto;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.divas-bullets ul {
+	list-style: none;
+}
+
+.divas-bullet {
+  	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 1.5em;
+    display: inline-block;
+    height: 16px;
+    margin: 0 0.3em;
+    text-indent: -9999px;
+    width: 16px;
+}
+
+.divas-bullet-current {
+   	background-color: rgba(0, 0, 0, 0.25);
+}
+
+
+ 
+ /************************************************************************
+ * 5. GENERAL media queries
+ *************************************************************************/
+ 
+@media screen and (max-width:470px) {
+.divas-caption h1 {
+		font-size:14px;
+	}
+	.divas-caption{ bottom:0;}
+}	
+
+ 

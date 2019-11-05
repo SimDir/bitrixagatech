@@ -1,0 +1,108 @@
+// utils
+@import 'utils/fonts.styl'
+@import 'utils/normalize.styl'
+@import 'utils/mixin.styl'
+@import 'utils/vars.styl'
+
+// base
+// animation
+@import 'base/animation.styl'
+// preloader
+@import 'base/preloader.styl'
+// modal
+// @import 'base/modal.styl'
+// message
+@import 'base/message.styl'
+
+
+//font
+body
+  font-family Montserrat
+  font-size fontSizeText
+  color mainFontColor
+  height 100vh
+  overflow hidden
+  overflow-y auto
+  
+h1
+  font-size fontSizeTitle
+p, a, li
+  font-weight normal
+  text-decoration none
+  color mainFontColor
+ul
+  list-style-type none
+  text-align left
+// fix UI
+#app
+  display -webkit-flex
+  display -moz-flex
+  display -ms-flex
+  display -o-flex
+  display flex
+  flex-direction column
+  justify-content space-between
+  min-height 100vh
+  overflow-y auto
+.page
+  flex-grow 1
+.wrapper
+  max-width unset
+.fill
+    flex-grow 1
+.blur
+  filter blur(2px)
+  transform scale(1.05)
+  opacity .7
+  transition all 3s
+.page 
+  padding paddingSize
+
+.m5 
+  margin 5px
+.m10
+  margin 10px
+
+
+.mx-input
+  height auto !important
+  padding 5px 30px !important
+  padding-left 10px !important
+
+// components
+@import 'components/header.styl'
+
+.vm-con-input-label .vm-con-input
+  font-size 14px
+  
+.vm-input--label
+  display inline-block
+
+
+.reg-bg
+  position fixed
+  top -5%
+  left -5%
+  width 110%
+  height 110%
+  z-index -1
+
+.vm-stepper__header
+  background #fff
+
+.vm-checkbox--input:checked+.vm-checkbox .vm-checkbox--check
+  display flex
+  justify-content center
+  align-items center
+  
+
+.vm-con-input
+  margin-top 10px !important
+
+
+.cropperDialog .con-vm-dialog .small
+  max-width 500px !important
+
+@import 'media/media.styl'
+
+

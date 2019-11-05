@@ -1,0 +1,53 @@
+div.swal2-popup{
+  box-shadow: 0 0 25px 3px rgba(0,0,0,0.2);
+}
+#swal2-content {
+	font-size: 14px;
+	display: flex !important;
+	align-items: center;
+}
+#swal2-content ol{ 
+  padding-left: 15px;
+}
+#swal2-content svg{
+	width: 24px; height: 24px;
+	margin-right: 15px;
+}
+div.swal2-container.swal2-shown{
+  background-color: transparent;
+}
+div.swal2-content{
+  font-family: 'Montserrat';
+}
+div.swal2-actions{
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.swal2-styled{
+  padding: 0.325em 1.4em;
+}
+button.swal2-styled.swal2-cancel, button.swal2-styled.swal2-confirm{
+  outline: none;
+  box-shadow: none;
+  font-size: 0.9625em;
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){
+  overflow-y: auto !important;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.swal2-custom-class{
+  position: absolute;
+  animation: fadeInUp 1s forwards ease-in-out;
+}

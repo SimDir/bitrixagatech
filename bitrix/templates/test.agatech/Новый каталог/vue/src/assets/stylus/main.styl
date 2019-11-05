@@ -1,0 +1,192 @@
+// utils
+@import 'utils/fonts.styl'
+@import 'utils/normalize.styl'
+@import 'utils/mixin.styl'
+@import 'utils/swal.styl'
+@import 'utils/vars.styl'
+
+// base
+// animation
+@import 'base/animation.styl'
+// preloader
+@import 'base/preloader.styl'
+// modal
+// @import 'base/modal.styl'
+// message
+@import 'base/message.styl'
+
+
+//font
+body
+  font-family Montserrat
+  font-size fontSizeText
+  color mainFontColor
+h1
+  font-size fontSizeTitle
+p, a, span, li
+  font-weight normal
+  text-decoration none
+  color mainFontColor
+  margin 10px
+// fix UI
+#app
+  display flex
+  justify-content space-between
+  height 100vh
+  overflow hidden
+.wrapper
+  max-width unset
+.fill
+    flex-grow 1
+.blur
+  filter blur(1.6px)
+.page 
+  flex-grow 1
+  padding paddingSize
+  overflow-y auto
+// components
+@import 'components/header.styl'
+@import 'components/headerAuth.styl'
+@import 'components/message.styl'
+
+// all style
+.page h1
+  margin 10px
+
+.auth
+  display flex
+  justify-content center
+  align-items center
+  flex-direction column
+  form
+    display inline-flex
+    flex-direction column
+  input
+    border none
+    outline: none
+    background orange-color
+    width 300px
+    padding-left 10px
+    height 40px
+    margin 5px
+    border-radius 50px
+    transition all .3s
+    &:focus
+      color red-color
+  button
+    border none
+    outline: none
+    background mainFontColor
+    color default-color
+    width 150px
+    height 40px
+    margin 5px
+    border-radius 50px
+    cursor pointer
+    transition all .3s
+    &:hover
+      background red-color
+
+
+.cart
+  position relative
+  margin 10px
+  padding 10px
+  border-radius 10px
+  height 200px
+  background purple-grey
+  transition all 1s
+  &:hover
+    cursor pointer
+    box-shadow 0 0 15px -5px rgba(0,0,0,0.2)
+
+.report
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background #fff
+  z-index: 9
+  transition all .5s
+
+
+.add-report-wrap
+  display flex
+
+.add-report-btn
+  background orange-color
+  border none
+  border-radius 50%
+  width 40px 
+  height 40px
+  font-size fontSizeTitle
+  cursor pointer
+  outline: none
+  overflow hidden
+  transition all .3s
+  &:hover
+    background red-color
+    color default-color
+
+.add-report-input
+  border none
+  outline: none
+  background orange-color
+  width 0
+  opacity 0
+  padding-left 10px
+  height 40px
+  border-radius 50px
+  transition all .3s
+
+.add-report-input.active
+  width 300px
+  margin-left 10px
+  opacity 1
+
+.report-list
+  display grid
+  grid-template-columns 33.333% 33.333% 33.333%
+  list-style-type none
+  padding 0
+  position relative
+  transition all 1s
+
+.report-item
+  position relative
+  margin 10px
+  padding 10px
+  border-radius 10px
+  height 200px
+  background purple-grey
+  transition all 1s
+  &:hover
+    cursor pointer
+    box-shadow 0 0 15px -5px rgba(0,0,0,0.2)
+
+
+.item-icon-wrap
+  display flex
+  position absolute
+  top 0
+  right 0
+
+.item-icon
+  background transparent
+  border none 
+  outline none
+  font-size 30px
+  cursor pointer
+  transition all .3s
+  &:hover
+    color red-color
+    fill red-color
+
+.item-date
+  position absolute
+  bottom 0
+  left 10px
+
+
+@import 'media/media.styl'
