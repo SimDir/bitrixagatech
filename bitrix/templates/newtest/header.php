@@ -1,63 +1,33 @@
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
-
-
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Whitesquare</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styles.css" rel="stylesheet">
-	<link href="http://fonts.googleapis.com/css?family=Oswald:400,300" rel="stylesheet">
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-	<div class="wrapper container">
-		<header>
-			<form name="search" action="#" method="get" class="form-inline form-search pull-right">
-				<div class="input-group">
-					<label class="sr-only" for="searchInput">Search</label>
-					<input class="form-control" id="searchInput" type="text" name="search" placeholder="Search">
-					<div class="input-group-btn">
-						<button type="submit" class="btn btn-primary">GO</button>
-					</div>
-				</div>
-			</form>
-    		<a href="/"><img src="images/logo.png" alt="Whitesquare logo"></a>
-		</header>
-		<nav class="navbar navbar-default">
-			<ul class="nav navbar-nav">
-				<li><a href="/home/">Home</a></li>
-				<li class="active"><a href="/about/">About us</a></li>
-				<li><a href="/services/">Services</a></li>
-				<li><a href="/partners/">Partners</a></li>
-				<li><a href="/customers/">Customers</a></li>
-				<li><a href="/projects/">Projects</a></li>
-				<li><a href="/careers/">Careers</a></li>
-				<li><a href="/contact/">Contact</a></li>
-			</ul>
-		</nav>
-		<div class="heading">
-			<h1>About us</h1>
-		</div>
-		<div class="row">
-			<aside class="col-md-7">
-				<ul class="list-group submenu">
-					<li class="list-group-item active">Lorem ipsum</li>
-					<li class="list-group-item"><a href="/donec/">Donec tincidunt laoreet</a></li>
-					<li class="list-group-item"><a href="/vestibulum/">Vestibulum elit</a></li>
-					<li class="list-group-item"><a href="/etiam/">Etiam pharetra</a></li>
-					<li class="list-group-item"><a href="/phasellus/">Phasellus placerat</a></li>
-					<li class="list-group-item"><a href="/cras/">Cras et nisi vitae odio</a></li>
-				</ul>
-				<div class="panel panel-primary">
-					<div class="panel-heading">Our offices</div>
-					<div class="panel-body">
-						<img src="images/map.png" class="img-responsive" alt="Our offices">
-					</div>
-				</div>
-			</aside>
-			<section class="col-md-17">
-				
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<?$APPLICATION->ShowHead()?>
+<title><?$APPLICATION->ShowTitle()?></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+<?//$APPLICATION->ShowPanel();?>
+
+
+<?$APPLICATION->IncludeComponent(
+        "bitrix:menu", 
+        "tabs", 
+        Array(
+                "ROOT_MENU_TYPE"	=>	"top",
+                "MAX_LEVEL"	=>	"1",
+                "USE_EXT"	=>	"N",
+                "MENU_CACHE_TYPE" => "A",
+                "MENU_CACHE_TIME" => "3600",
+                "MENU_CACHE_USE_GROUPS" => "N",
+                "MENU_CACHE_GET_VARS" => Array()
+        )
+);?>
+

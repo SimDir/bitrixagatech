@@ -1,22 +1,29 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
 <?if (!empty($arResult)):?>
-<div class="image-load-left"></div>
-<div class="image-load-right"></div>
-<div class="image-load-bg"></div>
 
-<div class="web-blue-tabs-menu" id="web-blue-tabs-menu">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" style="hei">
+    <a class="navbar-brand" href="#">tut LOGO saita</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-	<ul>
-<?foreach($arResult as $arItem):?>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+<!--            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>-->
+            <?foreach($arResult as $arItem):?>
 
-	<?if ($arItem["PERMISSION"] > "D"):?>
-		<li<?if ($arItem["SELECTED"]):?> class="selected"<?endif?>><a href="<?=$arItem["LINK"]?>"><nobr><?=$arItem["TEXT"]?></nobr></a></li>
-	<?endif?>
+            <?if ($arItem["PERMISSION"] > "D"):?>
+            <li<?if ($arItem["SELECTED"]):?> class="nav-item active"<?eseif?> class="nav-item active" <?endif?>><a class="nav-link" href="<?= $arItem["LINK"] ?>"><nobr><?= $arItem["TEXT"] ?></nobr></a></li>
+            <?endif?>
 
-<?endforeach?>
+            <?endforeach?>
+        </ul>
+        
+    </div>
+</nav>
 
-	</ul>
-</div>
-<div class="menu-clear-left"></div>
+
 <?endif?>
